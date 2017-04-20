@@ -1,0 +1,566 @@
+@charset "UTF-8";
+/* CSS Document */
+/*
+font-family: 'Assistant', sans-serif;
+font-family: 'Karma', serif;
+*/
+
+
+html {
+	height: 100%;
+	overflow: hidden;
+}
+
+body { 
+	margin:0;
+	padding:0;
+	perspective: 1px;
+	transform-style: preserve-3d;
+	height: 100%;
+	overflow-y: scroll;
+	overflow-x: hidden;
+	font-family:"ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+}
+
+img{
+	border-style:none;
+}
+
+.scroll{
+	padding-top:70px;
+	position:relative;
+	width:45px;
+	height:50px;
+	margin:80vh auto 0;
+	color:#FFFFFF;
+}
+.arrow{
+	position:absolute;
+	top:0;
+	left:45%;
+	width:30px;
+	height:30px;
+	margin-left:-12px;
+	border-left:1px solid #FFFFFF;
+	border-bottom:1px solid #FFFFFF;
+	-webkit-transform:rotate(-45deg);
+	transform:rotate(-45deg);
+	-webkit-animation:sdb 1.5s infinite;
+	animation:sdb 1.5s infinite;
+	box-sizing:border-box;
+}
+
+@-webkit-keyframes sdb {
+	0% {
+		-webkit-transform:rotate(-45deg) translate(0, 0);
+		opacity:0;
+	}
+	50% {
+		opacity:1;
+	}
+	100% {
+		-webkit-transform:rotate(-45deg) translate(-20px, 20px);
+		opacity:0;
+	}
+}
+@keyframes sdb {
+	0% {
+		transform:rotate(-45deg) translate(0, 0);
+		opacity:0;
+	}
+	50% {
+		opacity:1;
+	}
+	100% {
+		transform:rotate(-45deg) translate(-20px, 20px);
+		opacity:0;
+	}
+}
+
+/* PC&タブレット端末向けCSS */
+@media screen and (min-width:768px) {
+body{
+	-webkit-text-size-adjust:100%;
+	margin:0;
+	padding:0px;
+}
+
+header{
+	color:#FFF;
+	border-bottom:solid thin;
+	width:100%;
+	z-index:100;
+	position:fixed;
+}
+
+.header_title{
+	font-size:30px;
+	margin:0;
+	display:inline-block;
+	width:40%;
+}
+
+.header_title h1{
+	font-size:30px;
+	margin:0;
+	font-family: 'Assistant', sans-serif;
+	display:inline;
+	padding-left:1em;
+	color:#FFFFFF;
+}
+
+.header_title a{
+	color:#FFFFFF;
+}
+
+.textbox{
+	display:inline-block;
+	padding-right:1em;
+	white-space:nowrap;
+	width:55%;
+	text-align:right;
+}
+
+
+a{
+	text-decoration: none;
+}
+
+a:hover{
+	color:#17AFD5;
+}
+
+/*.text{
+	color:#FFF;
+	font-size:150%;
+	display:inline-block;
+	margin-right:10%;
+	text-decoration: none;
+	font-family: 'Assistant', sans-serif;
+}*/
+
+.firstview{
+	width:100%;
+	height:30vh;
+}
+
+.bgslideshow { 
+	position: fixed; 
+	left:0; 
+	top:0; 
+	z-index: -1; 
+	height: 100%; 
+	width: 100%;
+}  
+.bgslideshow img {
+	 position: absolute;
+	 min-height: 100%;
+	 min-width: 800px;
+	 width: 100%;
+	 height: auto;
+	 left:0; top:0;
+}
+
+.shop_name{
+   font-size: 200%;
+   border-bottom:solid 2px #666;
+   width:100%;
+   margin:0 auto;
+   z-index:1;
+}
+h1{
+	font-size:200%;
+}
+p {
+  font-size: 100%;
+  line-height: 150%;
+  color: #333;
+  margin:0 auto;
+  font-weight:700;
+}
+.p1{
+	font-size:70%;
+	color:#333;	
+}
+
+.slide {
+  position: relative;
+  padding:10%;
+  /*min-height: 100%;*/
+  width: 100%;
+  box-sizing: border-box;
+  /*box-shadow: 0 -1px 10px rgba(0, 0, 0, .7);*/
+}
+
+.header_title{
+	font-size:30px;
+	margin:0;
+	display:inline-block;
+	width:40%;
+}
+
+.gnav{
+	display:inline-block;
+	padding-right:0.5em;
+	white-space:nowrap;
+	width:55%;
+	text-align:right;
+}
+
+.navi{
+	color:#565656;
+	font-size:150%;
+	display:inline-block;
+	margin-right:2em;
+	text-decoration: none;
+	font-family: 'Assistant', sans-serif;
+}
+
+.top_header {
+  text-align: center;
+  font-size: 150%;
+  color:#333;
+}
+
+#title {
+	background-color:#FFF;
+	background-attachment: fixed;
+	margin:0 auto;
+}
+
+#title iframe{
+	width:50%;
+	height:45vh;
+	margin:20px auto 0;
+}
+
+#slide1{
+  background-image:url(img/rarabibi_bg1.jpg);
+  /*transform: translateZ(-1px) scale(2);
+  z-index:-1;*/
+  background-size: cover;
+  background-attachment: fixed;
+  z-index:-1;
+}
+
+#slide2 {
+  background-image:url(img/rarabibi_bg2.jpg);
+  background-size: cover;
+  z-index:2;
+}
+
+#slide3{
+  background-image:url(img/rarabibi_bg3.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  /*overflow:hidden;*/
+  z-index:3;
+}
+
+.photo{
+	background-repeat:no-repeat;
+	position:relative;
+	background-attachment:fixed;
+}
+
+#contact{
+	padding:0 0 20% 60%;
+}
+
+#contact img{
+	width:100%;
+}
+
+
+.logo{
+	width:20%;
+	display:block;
+	color:#565656;
+}
+
+.text{
+	color:#FFFFFF;
+	font-size:20px;
+	display:inline-block;
+	margin-right:3%;
+	text-decoration: none;
+	font-family: 'Assistant', sans-serif;
+}
+
+.text2{
+	color:#565656;
+	font-size:20px;
+	display:inline-block;
+	margin-right:3%;
+	text-decoration: none;
+	font-family: 'Assistant', sans-serif;
+}
+
+
+footer{
+	height:15%;
+}
+
+.menu{
+	display:block;
+	width:40%;
+	margin-top:10%;
+}
+
+.menu a:hover{
+	color:#17AFD5;
+}
+
+}
+
+/* スマホ向けCSS */
+@media screen and (max-width:767px) {
+body{
+	-webkit-text-size-adjust:100%;
+	margin:0;
+	padding:0px;
+}
+
+header{
+	color:#FFF;
+	border-bottom:solid thin;
+	width:100%;
+	z-index:100;
+	position:fixed;
+}
+
+.header_title{
+	font-size:150%;
+	margin:0;
+	display:block;
+	/*width:40%;*/
+}
+
+.header_title h1{
+	font-size:150%;
+	margin:0 0 0.5em;
+	font-family: 'Assistant', sans-serif;
+	/*display:inline;*/
+	padding-left:0.2em;
+}
+
+.header_title a{
+	color:#FFFFFF;
+}
+
+.textbox{
+	display:block;
+	padding-left:0.5em;
+	white-space:nowrap;
+	width:70%;
+	text-align:right;
+}
+
+
+a{
+	text-decoration: none;
+}
+
+/*.text{
+	color:#FFF;
+	font-size:120%;
+	display:inline-block;
+	margin-right:10%;
+	text-decoration: none;
+	font-family: 'Assistant', sans-serif;
+}*/
+
+.bgslideshow { 
+	position: fixed; 
+	left:0; 
+	top:0; 
+	z-index: -1; 
+	height: 100%; 
+	width: 100%;
+}  
+.bgslideshow img {
+	 position: absolute;
+	 min-height: 100%;
+	 min-width: 800px;
+	 width: 100%;
+	 height: auto;
+	 left:0; top:0;
+}
+
+.shop_name{
+   font-size: 200%;
+   border-bottom:solid 2px #666;
+   width:90%;
+   margin:10% auto;
+}
+h1{
+	font-size:190%;
+}
+p {
+  font-size: 100%;
+  line-height: 150%;
+  color: #333;
+  margin:0 auto;
+  }
+.p1{
+	font-size:70%;
+	color:#333;
+	}
+
+.slide {
+  position: relative;
+  padding: 30% 10% 30% 10%;
+  min-height: 100%;
+  width: 100%;
+  box-sizing: border-box;
+  /*box-shadow: 0 -1px 10px rgba(0, 0, 0, .7);*/
+}
+
+
+.title {
+  padding:8%;
+  text-align:center;
+  background: rgba(255,255,255, .7); 
+}
+
+.slide, .slide:before {
+  background: 50% 50% / cover;  
+}
+
+header{
+	color:#FFF;
+	border-bottom:solid thin;
+	width:100%;
+	z-index:100;
+	position:fixed;
+}
+
+.header_title{
+	font-size:150%;
+	margin:0;
+	display:block;
+	/*width:40%;*/
+}
+
+.header_title h1{
+	font-size:150%;
+	margin:0;
+	font-family: 'Assistant', sans-serif;
+	color:#565656;
+	padding:0.2em;
+}
+
+.header_title a{
+	color:#FFFFFF;
+}
+
+.textbox{
+	display:block;
+	padding-left:0.5em;
+	white-space:nowrap;
+	width:70%;
+	text-align:right;
+}
+
+
+a{
+	text-decoration: none;
+}
+
+.gnav{
+	width:990%;
+	padding-left:1em;
+}
+
+.navi{
+	color:#565656;
+	font-size:120%;
+	display:inline-block;
+	margin-right:1em;
+	text-decoration: none;
+	font-family: 'Assistant', sans-serif;
+}
+
+.top_header {
+  text-align: center;
+  font-size: 150%;
+  color:#333;
+}
+
+#title {
+	background-color:#FFF;
+	background-attachment: fixed;
+	margin:0 auto;
+}
+
+#title iframe{
+	width:100%;
+	height:35vh; 
+	margin:20px auto 0;
+}
+
+#slide1{
+  background-image:url(img/rarabibi_bg1.jpg);
+  /*transform: translateZ(-1px) scale(2);
+  z-index:-1;*/
+  background-size: cover;
+  background-attachment: fixed;
+  z-index:-1;
+}
+
+#slide2 {
+  background-image:url(img/rarabibi_bg2.jpg);
+  background-size: cover;
+  z-index:2;
+}
+
+#slide3{
+  background-image:url(img/rarabibi_bg3.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  /*overflow:hidden;*/
+  z-index:3;
+}
+
+#contact{
+	width:60%;
+	margin:10% auto;
+}
+
+#contact img{
+	width:100%;
+}
+
+.logo{
+	width:40%;
+	display:block;
+	margin:0 auto;
+}
+.text{
+	color:#FFFFFF;
+	font-size:20px;
+	display:inline-block;
+	margin-right:3%;
+	text-decoration: none;
+	font-family: 'Assistant', sans-serif;
+}
+
+.text2{
+	color:#565656;
+	font-size:20px;
+	display:inline-block;
+	margin-right:3%;
+	text-decoration: none;
+	font-family: 'Assistant', sans-serif;
+}
+.menu{
+	width:40%;
+	display:block;
+	margin:10% auto 0;
+}
+
+.menu a:hover{
+	color:#17AFD5;
+}
+
+}

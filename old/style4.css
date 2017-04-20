@@ -1,0 +1,152 @@
+@charset "UTF-8";
+/* CSS Document */
+@import url(//fonts.googleapis.com/earlyaccess/notosansjapanese.css);
+
+html {
+  height: 100%;
+  overflow: hidden;
+}
+
+body { 
+  margin:0;
+  padding:0;
+  perspective: 1px;
+  transform-style: preserve-3d;
+  height: 100%;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  font-family:'Noto Sans Japanese', serif;
+}
+
+
+h1 {
+   font-size: 200%;
+   color:#333;
+}
+p {
+  font-size: 130%;
+  line-height: 150%;
+  color:#333;
+}
+
+.text{
+	font-size:16px;
+}
+.slide {
+  position: relative;
+  padding: 20% 10% 10% 10%;
+  min-height: 100%;
+  width: 100%;
+  box-sizing: border-box;
+  box-shadow: 0 -1px 10px rgba(0, 0, 0, .7);
+}
+
+
+.title {
+  font-size:10pt;
+  color:#333;
+  text-align:center;
+  background-color:rgba(255,255,255,0.8);
+  padding:2%;
+  margin:0 auto 10%;
+}
+.title2{
+	text-align:center;
+	font-size:14px;
+	background-color:rgba(255,255,255,0.8);
+	padding:5%;
+}
+.title3{
+	background-color:rgba(255,255,255,0.5);
+	padding:10px;
+}
+.slide:nth-child(2n) .title {
+  margin-left: 0;
+  margin-right: auto;
+}
+
+
+.slide, .slide:before {
+  background: 50% 50% / cover;  
+}
+
+.header {
+  text-align: center;
+  font-size: 150%;
+  color:#333;
+}
+
+#title {
+  background-color:#FFF;
+  background-attachment:fixed;   
+}
+#title h1{
+	border-bottom:solid 2px #999;
+	width:30%;
+	margin:0 auto;
+}
+
+#slide1{
+  background-image:url(img/title2.png);
+  z-index:-1;
+}
+
+#slide2 {
+  background-image:url(image/pic1.png);
+  background-attachment: fixed;
+}
+
+#slide3{
+  background-image:url(img/tights.png);
+  z-index:-1;  
+}
+
+
+#contact{
+	padding:0 0 20% 60%;
+}
+.menu_text{
+	color:#333;
+	font-size:20px;
+	display:inline-block;
+	margin-right:3%;
+	text-decoration: none;
+}
+.menu{
+	position:fixed;
+	width:30%;
+	left:30%;
+}
+@media screen and (max-width: 480px) {
+  	#title h1{
+	  margin:0 auto;
+	  }
+  	#contact img{
+	  max-width:100%;
+	}
+	#slide2 {
+  background-attachment:scroll
+	}
+	.menu_text{
+	font-size:3px;
+	color:#FFF;
+	}
+	div.menu{
+	position:fixed;
+	left:60%;
+	}
+	
+	h1{
+		font-size:10px;
+	}
+	.step{
+		font-size:8px;
+	}
+	p,.text{
+		font-size:5px;
+	}
+	div.logo img{
+		width:50%;
+		height:50%;
+	}
+}
